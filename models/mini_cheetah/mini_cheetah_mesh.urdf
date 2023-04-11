@@ -12,7 +12,7 @@
             <geometry>
                 <mesh filename="meshes/solo_12_base.obj"/>
             </geometry>
-            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            <origin rpy="1.5707963267948966 0.0 0.0" xyz="0.0 0.0 0.0"/>
             <material
         name="base_link">
         <color 
