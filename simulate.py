@@ -12,7 +12,7 @@ show_trunk_model = True
 use_lcm = False
 
 planning_method = "towr"   # "towr" or "basic"
-control_method = "CLF"      # ID = Inverse Dynamics (standard QP), 
+control_method = "ID"      # ID = Inverse Dynamics (standard QP), 
                            # B = Basic (simple joint-space PD), 
                            # MPTC = task-space passivity
                            # PC = passivity-constrained
@@ -29,7 +29,8 @@ make_plots = True
 
 # Drake only loads things relative to the drake path, so we have to do some hacking
 # to load an arbitrary file
-robot_description_path = "./models/mini_cheetah/mini_cheetah_mesh.urdf"
+# robot_description_path = "./models/mini_cheetah/mini_cheetah_mesh.urdf"
+robot_description_path = "./models/solo12dof_quadruped/solo12dof_quadruped.urdf"
 drake_path = getDrakePath()
 robot_description_file = "drake/" + os.path.relpath(robot_description_path, start=drake_path)
 
@@ -220,7 +221,7 @@ if make_plots:
 
     plt.savefig('dV_V_error.png')
     # plt.show()
-    
+
 import time
 while True:
     vis.PublishRecording()

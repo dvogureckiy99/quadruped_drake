@@ -5,7 +5,7 @@
 <robot
   name="solo12dof_quadruped">
   <link
-    name="base_link">
+    name="body">
     <inertial>
       <origin
         xyz= "-0.43736695e-2 -0.07737584e-2 0.08102850e-2" 
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo_12_base.obj" />
+          filename="meshes/solo12_base.obj" />
       </geometry>
       <material
         name="base_link">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo_12_base.STL" />
+          filename="meshes/solo12_base.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -93,7 +93,7 @@
       xyz="0.2141 -0.0875 0"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="body" />
     <child
       link="hip_fe_fr" />
     <axis
@@ -152,7 +152,7 @@
       xyz="0.2141 0.0875 0"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="body" />
     <child
       link="hip_fe_fl" />
     <axis
@@ -211,7 +211,7 @@
       xyz="-0.2141 -0.0875 0"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="body" />
     <child
       link="hip_fe_rr" />
     <axis
@@ -270,7 +270,7 @@
       xyz="-0.2141 0.0875 0"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="body" />
     <child
       link="hip_fe_rl" />
     <axis
@@ -755,6 +755,88 @@
       effort="18"
       velocity="40" />
   </joint>
+<!-- Add foot links to enable relevent computations, including better collision detection -->
+<!-- FR -->
+  <joint name="foot_fr" type="fixed">
+      <parent link="LLM_fr"/>
+      <child link="RF_FOOT"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="RF_FOOT">
+      <collision>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </collision>
+      <visual>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </visual>
+  </link>
+<!-- FL -->
+  <joint name="foot_fl" type="fixed">
+      <parent link="LLM_fl"/>
+      <child link="LF_FOOT"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="LF_FOOT">
+      <collision>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </collision>
+      <visual>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </visual>
+  </link>
+<!-- FR -->
+  <joint name="foot_rr" type="fixed">
+      <parent link="LLM_rr"/>
+      <child link="RH_FOOT"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="RH_FOOT">
+      <collision>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </collision>
+      <visual>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </visual>
+  </link>
+<!-- FR -->
+  <joint name="foot_rl" type="fixed">
+      <parent link="LLM_rl"/>
+      <child link="LH_FOOT"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="LH_FOOT">
+      <collision>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </collision>
+      <visual>
+          <geometry>
+              <sphere radius = "0.0159"/>
+          </geometry>
+          <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+      </visual>
+  </link>
+
 
 <!-- Joint Transmissions: Tells Drake that these are actuated -->
 <!-- FR leg -->
@@ -792,7 +874,7 @@
 <!-- RR leg -->
   <transmission name="hip_fe_rr_transmission">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="hip_fe_r"/>
+      <joint name="hip_fe_rr"/>
       <actuator name="hip_fe_rr_actuator"/>
   </transmission>
   <transmission name="ULM_rr_transmission">
