@@ -30,7 +30,7 @@ make_plots = True
 # Drake only loads things relative to the drake path, so we have to do some hacking
 # to load an arbitrary file
 # robot_description_path = "./models/mini_cheetah/mini_cheetah_mesh.urdf"
-robot_description_path = "./models/solo12dof_quadruped/solo12dof_quadruped.urdf"
+robot_description_path = "./models/mini_cheetah/mini_cheetah_mesh.urdf"
 drake_path = getDrakePath()
 robot_description_file = "drake/" + os.path.relpath(robot_description_path, start=drake_path)
 
