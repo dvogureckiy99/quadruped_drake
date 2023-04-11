@@ -13,13 +13,18 @@
                 <mesh filename="meshes/mini_body.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            <material
+        name="base_link">
+        <color 
+          rgba="1 0 0 1" />
+      </material>
         </visual>
-        <collision>
+        <!-- <collision>
             <geometry>
                 <box size="0.23 0.19 0.1"/>
             </geometry>
             <origin rpy="0 0 0" xyz="0 0 0"/>
-        </collision>
+        </collision> -->
     </link>
 
     <!--!!!!!!!!!!!! Front Left Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
