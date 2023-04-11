@@ -10,13 +10,13 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_body.obj"/>
+                <mesh filename="meshes/solo_12_base.obj"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
             <material
         name="base_link">
         <color 
-          rgba="1 0 0 1" />
+          rgba="0 0 0 0.83" />
       </material>
         </visual>
         <!-- <collision>
