@@ -33,7 +33,7 @@ cd ~/git/drake-build
 export PYTHONPATH=${PWD}/install/lib/python3.8/site-packages:${PYTHONPATH}
 cd ~/git/quadruped_drake/
 ```
-~~Start the drake visualizer `bazel-bin/tools/drake_visualizer` ~~
+~~Start the drake visualizer `bazel-bin/tools/drake_visualizer`~~
 Now host created automatically and you need only open host site. 
 
 Run the simulation script `./simulate.py`.
