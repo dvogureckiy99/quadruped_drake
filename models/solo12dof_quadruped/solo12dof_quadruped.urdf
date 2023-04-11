@@ -756,24 +756,71 @@
       velocity="40" />
   </joint>
 
-  <!-- Joint Transmissions: Tells Drake that these are actuated -->
+<!-- Joint Transmissions: Tells Drake that these are actuated -->
 <!-- FR leg -->
-  <transmission name="torso_to_abduct_fl_j_transmission">
+  <transmission name="hip_fe_fr_transmission">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="torso_to_abduct_fl_j"/>
-      <actuator name="torso_to_abduct_fl_j_actuator"/>
+      <joint name="hip_fe_fr"/>
+      <actuator name="hip_fe_fr_actuator"/>
   </transmission>
-  <transmission name="abduct_fl_to_thigh_fl_j_transmission">
+  <transmission name="ULM_fr_transmission">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="abduct_fl_to_thigh_fl_j"/>
-      <actuator name="abduct_fl_to_thigh_fl_j_actuator"/>
+      <joint name="ULM_fr"/>
+      <actuator name="ULM_fr_actuator"/>
   </transmission>
-  <transmission name="thigh_fl_to_knee_fl_j_transmission">
+  <transmission name="LLM_fr_transmission">
       <type>transmission_interface/SimpleTransmission</type>
-      <joint name="thigh_fl_to_knee_fl_j"/>
-      <actuator name="thigh_fl_to_knee_fl_j_actuator"/>
+      <joint name="LLM_fr"/>
+      <actuator name="LLM_fr_actuator"/>
   </transmission>
-
+<!-- FL leg -->
+  <transmission name="hip_fe_fl_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="hip_fe_fl"/>
+      <actuator name="hip_fe_fl_actuator"/>
+  </transmission>
+  <transmission name="ULM_fl_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="ULM_fl"/>
+      <actuator name="ULM_fl_actuator"/>
+  </transmission>
+  <transmission name="LLM_fl_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="LLM_fl"/>
+      <actuator name="LLM_fl_actuator"/>
+  </transmission>
+<!-- RR leg -->
+  <transmission name="hip_fe_rr_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="hip_fe_r"/>
+      <actuator name="hip_fe_rr_actuator"/>
+  </transmission>
+  <transmission name="ULM_rr_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="ULM_rr"/>
+      <actuator name="ULM_rr_actuator"/>
+  </transmission>
+  <transmission name="LLM_rr_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="LLM_rr"/>
+      <actuator name="LLM_rr_actuator"/>
+  </transmission>
+<!-- RL leg -->
+  <transmission name="hip_fe_rl_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="hip_fe_rl"/>
+      <actuator name="hip_fe_rl_actuator"/>
+  </transmission>
+  <transmission name="ULM_rl_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="ULM_rl"/>
+      <actuator name="ULM_rl_actuator"/>
+  </transmission>
+  <transmission name="LLM_rl_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="LLM_rl"/>
+      <actuator name="LLM_rl_actuator"/>
+  </transmission>
 
 
 </robot>
