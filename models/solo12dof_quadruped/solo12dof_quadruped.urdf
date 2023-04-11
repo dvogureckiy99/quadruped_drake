@@ -99,8 +99,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-2.44"
-      upper="2.44"
+      lower="-2.443460952792061"
+      upper="1.3089969389957472"
       effort="18"
       velocity="40" />
   </joint>
@@ -158,8 +158,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-2.44"
-      upper="2.44"
+      lower="-1.3089969389957472"
+      upper="2.443460952792061"
       effort="18"
       velocity="40" />
   </joint>
@@ -217,8 +217,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-2.44"
-      upper="2.44"
+      lower="-2.443460952792061"
+      upper="1.3089969389957472"
       effort="18"
       velocity="40" />
   </joint>
@@ -253,7 +253,7 @@
           rgba="1 0 0 1" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
@@ -261,7 +261,7 @@
         <mesh
           filename="package://solo12dof_quadruped/meshes/solo12_hip_fe_hl.stl" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint
     name="hip_fe_rl"
@@ -276,8 +276,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-2.44"
-      upper="2.44"
+      lower="-1.3089969389957472"
+      upper="2.443460952792061"
       effort="18"
       velocity="40" />
   </joint>
