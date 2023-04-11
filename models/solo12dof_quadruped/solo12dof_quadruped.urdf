@@ -68,7 +68,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_hip_fe_fr.stl" />
+          filename="meshes/solo12_hip_fe_fr.obj" />
       </geometry>
       <material
         name="hip_fe_fr">
@@ -82,7 +82,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_hip_fe_fr.stl" />
+          filename="/meshes/solo12_hip_fe_fr.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -127,7 +127,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_hip_fe_fl.stl" />
+          filename="meshes/solo12_hip_fe_fl.obj" />
       </geometry>
       <material
         name="hip_fe_fl">
@@ -141,7 +141,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_hip_fe_fl.stl" />
+          filename="meshes/solo12_hip_fe_fl.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -186,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_hip_fe_hr.stl" />
+          filename="meshes/solo12_hip_fe_hr.obj" />
       </geometry>
       <material
         name="hip_fe_rr">
@@ -200,7 +200,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_hip_fe_hr.stl" />
+          filename="meshes/solo12_hip_fe_hr.obj" />
       </geometry>
     </collision>
   </link>
@@ -245,7 +245,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_hip_fe_hl.stl" />
+          filename="meshes/solo12_hip_fe_hl.obj" />
       </geometry>
       <material
         name="hip_fe_rl">
@@ -259,7 +259,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_hip_fe_hl.stl" />
+          filename="meshes/solo12_hip_fe_hl.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -305,7 +305,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_upper_leg_right_side.stl" />
+          filename="meshes/solo12_upper_leg_right_side.obj" />
       </geometry>
       <material
         name="ULM_fr">
@@ -319,7 +319,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_upper_leg_right_side.stl" />
+          filename="meshes/solo12_upper_leg_right_side.obj" />
       </geometry>
     </collision>
   </link>
@@ -364,7 +364,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_upper_leg_left_side.stl" />
+          filename="meshes/solo12_upper_leg_left_side.obj" />
       </geometry>
       <material
         name="ULM_fl">
@@ -378,7 +378,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_upper_leg_left_side.stl" />
+          filename="meshes/solo12_upper_leg_left_side.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -423,7 +423,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_upper_leg_right_side.stl" />
+          filename="meshes/solo12_upper_leg_right_side.obj" />
       </geometry>
       <material
         name="ULM_rr">
@@ -437,7 +437,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_upper_leg_right_side.stl" />
+          filename="meshes/solo12_upper_leg_right_side.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -482,7 +482,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_upper_leg_left_side.stl" />
+          filename="meshes/solo12_upper_leg_left_side.obj" />
       </geometry>
       <material
         name="ULM_rl">
@@ -496,7 +496,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_upper_leg_left_side.stl" />
+          filename="meshes/solo12_upper_leg_left_side.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -556,7 +556,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_lower_leg_v2_right_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_right_side.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -601,7 +601,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_lower_leg_v2_left_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_left_side.obj" />
       </geometry>
       <material
         name="LLM_fl">
@@ -615,7 +615,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_lower_leg_v2_left_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_left_side.obj" />
       </geometry>
     </collision> -->
   </link>
@@ -660,7 +660,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_lower_leg_v2_right_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_right_side.obj" />
       </geometry>
       <material
         name="LLM_rr">
@@ -674,7 +674,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_lower_leg_v2_right_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_right_side.obj" />
       </geometry>
     </collision>
   </link>
@@ -719,7 +719,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="meshes/solo12_lower_leg_v2_left_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_left_side.obj" />
       </geometry>
       <material
         name="LLM_rl">
@@ -733,7 +733,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://solo12dof_quadruped/meshes/solo12_lower_leg_v2_left_side.STL" />
+          filename="meshes/solo12_lower_leg_v2_left_side.obj" />
       </geometry>
     </collision> -->
   </link>
