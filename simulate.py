@@ -5,24 +5,25 @@ from controllers import *
 from planners import BasicTrunkPlanner, TowrTrunkPlanner
 import os
 import sys
+from matplotlib import pyplot as plt
 
 ############### Common Parameters ###################
 show_trunk_model = True
 use_lcm = False
 
 planning_method = "towr"   # "towr" or "basic"
-control_method = "ID"      # ID = Inverse Dynamics (standard QP), 
+control_method = "CLF"      # ID = Inverse Dynamics (standard QP), 
                            # B = Basic (simple joint-space PD), 
                            # MPTC = task-space passivity
                            # PC = passivity-constrained
                            # CLF = control-lyapunov-function based
 
-sim_time = 6.0
+sim_time = 10.0
 dt = 5e-3
 target_realtime_rate = 1.0
 
-show_diagram = False
-make_plots = False
+show_diagram = True
+make_plots = True
 
 #####################################################
 
@@ -142,8 +143,10 @@ builder.Connect(plant.get_state_output_port(),
 logger = LogVectorOutput(controller.GetOutputPort("output_metrics"),builder)
 
 # Set up the Visualizer
-DrakeVisualizer().AddToBuilder(builder, scene_graph)
-ConnectContactResultsToDrakeVisualizer(builder, plant, scene_graph)
+meshcat = Meshcat()
+vis = MeshcatVisualizer.AddToBuilder(builder, scene_graph, meshcat)
+# DrakeVisualizer().AddToBuilder(builder, scene_graph)
+# ConnectContactResultsToDrakeVisualizer(builder, plant, scene_graph)
 
 # Compile the diagram: no adding control blocks from here on out
 diagram = builder.Build()
@@ -154,7 +157,8 @@ diagram_context = diagram.CreateDefaultContext()
 if show_diagram:
     plt.figure()
     plot_system_graphviz(diagram,max_depth=2)
-    plt.show()
+    # plt.show()
+    plt.savefig('diagram.png')
 
 # Simulator setup
 simulator = Simulator(diagram, diagram_context)
@@ -179,7 +183,11 @@ plant.SetPositions(plant_context,q0)
 plant.SetVelocities(plant_context,qd0)
 
 # Run the simulation!
+# simulator.AdvanceTo(sim_time)
+# Run the simulation!
+vis.StartRecording()
 simulator.AdvanceTo(sim_time)
+vis.StopRecording()
 
 if make_plots:
     log = logger.FindLog(diagram_context)
@@ -210,4 +218,10 @@ if make_plots:
     plt.ylabel("$\|y_1-y_2\|^2$")
     plt.xlabel("time (s)")
 
-    plt.show()
+    plt.savefig('dV_V_error.png')
+    # plt.show()
+    
+import time
+while True:
+    vis.PublishRecording()
+    time.sleep(sim_time)

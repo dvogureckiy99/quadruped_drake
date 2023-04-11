@@ -55,7 +55,7 @@ class TowrTrunkPlanner(BasicTrunkPlanner):
         # Run the trajectory optimization (TOWR)
         # syntax is trunk_mpc gait_type={walk,trot,pace,bound,gallop} optimize_gait={0,1} distance_x distance_y
         my_env = os.environ
-        my_env["LD_LIBRARY_PATH"] = ""   # need to set this so only the custom version of towr gets used, not
+        my_env["LD_LIBRARY_PATH"] = "/usr/local/lib/"   # need to set this so only the custom version of towr gets used, not
                                          # the one in catkin_ws (if it exits)
         sub.Popen(["build/towr/trunk_mpc","walk","0","1.5", "0.0"], env=my_env)  
 
