@@ -755,4 +755,25 @@
       effort="18"
       velocity="40" />
   </joint>
+
+  <!-- Joint Transmissions: Tells Drake that these are actuated -->
+<!-- FR leg -->
+  <transmission name="torso_to_abduct_fl_j_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="torso_to_abduct_fl_j"/>
+      <actuator name="torso_to_abduct_fl_j_actuator"/>
+  </transmission>
+  <transmission name="abduct_fl_to_thigh_fl_j_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="abduct_fl_to_thigh_fl_j"/>
+      <actuator name="abduct_fl_to_thigh_fl_j_actuator"/>
+  </transmission>
+  <transmission name="thigh_fl_to_knee_fl_j_transmission">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="thigh_fl_to_knee_fl_j"/>
+      <actuator name="thigh_fl_to_knee_fl_j_actuator"/>
+  </transmission>
+
+
+
 </robot>
