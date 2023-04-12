@@ -57,7 +57,7 @@ plant.RegisterVisualGeometry(
         X_BG,
         HalfSpace(),
         "ground_visual",
-        np.array([0.5,0.5,0.5,0.0]))    # Color set to be completely transparent
+        np.array([0.5,0.5,0.5,0.8]))  
 
 # Turn off gravity
 #g = plant.mutable_gravity_field()

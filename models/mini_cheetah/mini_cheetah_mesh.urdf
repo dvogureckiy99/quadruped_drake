@@ -114,7 +114,7 @@
 
     <joint name="thigh_fl_to_knee_fl_j" type="continuous">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 0.0 -0.209"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 37e-3 -0.209"/>
         <parent link="thigh_fl"/>
         <child link="shank_fl"/>
         <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
@@ -234,7 +234,7 @@
 
     <joint name="thigh_fr_to_knee_fr_j" type="continuous">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 0.0 -0.209"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 -37e-3 -0.209"/>
         <parent link="thigh_fr"/>
         <child link="shank_fr"/>
         <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
@@ -354,7 +354,7 @@
 
     <joint name="thigh_hl_to_knee_hl_j" type="continuous">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 0.0 -0.209"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 37e-3 -0.209"/>
         <parent link="thigh_hl"/>
         <child link="shank_hl"/>
         <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
@@ -474,7 +474,7 @@
 
     <joint name="thigh_hr_to_knee_hr_j" type="continuous">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 0.0 -0.209"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 -37e-3 -0.209"/>
         <parent link="thigh_hr"/>
         <child link="shank_hr"/>
         <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
