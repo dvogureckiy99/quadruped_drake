@@ -159,7 +159,7 @@ if show_diagram:
     plt.figure()
     plot_system_graphviz(diagram,max_depth=2)
     # plt.show()
-    plt.savefig('diagram.png')
+    plt.savefig('diagram.pdf')
 
 # Simulator setup
 simulator = Simulator(diagram, diagram_context)
@@ -219,7 +219,7 @@ if make_plots:
     plt.ylabel("$\|y_1-y_2\|^2$")
     plt.xlabel("time (s)")
 
-    plt.savefig('dV_V_error.png')
+    plt.savefig('dV_V_error.pdf')
     # plt.show()
 
 # vis.PublishRecording()
