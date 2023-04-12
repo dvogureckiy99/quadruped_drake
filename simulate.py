@@ -222,6 +222,7 @@ if make_plots:
     plt.savefig('dV_V_error.png')
     # plt.show()
 
+# vis.PublishRecording()
 import time
 while True:
     vis.PublishRecording()

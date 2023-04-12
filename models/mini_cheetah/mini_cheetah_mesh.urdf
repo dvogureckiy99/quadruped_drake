@@ -13,11 +13,11 @@
                 <mesh filename="meshes/solo_12_base.obj"/>
             </geometry>
             <origin rpy="1.5707963267948966 0.0 0.0" xyz="0.0 0.0 0.0"/>
-            <material
+            <!-- <material
         name="base_link">
         <color 
           rgba="0 0 0 0.83" />
-      </material>
+      </material> -->
         </visual>
         <!-- <collision>
             <geometry>
@@ -30,7 +30,7 @@
     <!--!!!!!!!!!!!! Front Left Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <joint name="torso_to_abduct_fl_j" type="continuous">
         <axis xyz="1 0 0"/>
-        <origin rpy="0 0 0" xyz="0.19 0.049 0.0"/>
+        <origin rpy="0 0 0" xyz="0.19 0.049 0.0 "/> 
         <parent link="body"/>
         <child link="abduct_fl"/>
         <limit effort="18" lower="-1.6" upper="1.6" velocity="40"/>
@@ -44,9 +44,9 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_abad.obj"/>
+                <mesh filename="meshes/solo12_hip_fe_fl.obj"/>
             </geometry>
-            <origin rpy="0. 0. -1.5708" xyz="-0.055 0.0 0.0"/>
+            <origin rpy="1.5707963267948966 0. 0." xyz="0.0241 0.0385 0.0"/>
         </visual>
         <!--
         <collision>
@@ -80,9 +80,9 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_upper_link.obj"/>
+                <mesh filename="meshes/solo12_upper_leg_left_side.obj"/>
             </geometry>
-            <origin rpy="0.0 -1.5708 3.1415" xyz="0.0 0.0 0.0"/>
+            <origin rpy="1.5707963267948966 0 0" xyz="0 0 0.0"/>
         </visual>
         <!--
         <collision>
@@ -109,9 +109,9 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_lower_link.obj"/>
+                <mesh filename="meshes/solo12_lower_leg_v2_left_side.obj"/>
             </geometry>
-            <origin rpy="0.0 3.141592 0.0" xyz="0.0 0.0 0.0"/>
+            <origin rpy="-1.5707963267948966 0 0.0" xyz="0.0 37e-3 0.049"/>
         </visual>
         <!--
         <collision>
