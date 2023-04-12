@@ -63,7 +63,7 @@
         </collision>
         -->
     </link>
-
+<!-- 0.0 0.062 0.00    -19.65e-3 14e-3 0 -->
     <joint name="abduct_fl_to_thigh_fl_j" type="continuous">
         <axis xyz="0 -1 0"/>
         <origin rpy="0.0 0.0 0.0" xyz="0.0 0.062 0.00"/>
@@ -147,9 +147,9 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_abad.obj"/>
+                <mesh filename="meshes/solo12_hip_fe_fr.obj"/>
             </geometry>
-            <origin rpy="3.141592 0.0 1.5708" xyz="-0.055 0.0 0.0"/>
+            <origin rpy="1.5707963267948966 0.0 0" xyz="0 0.0 0.0"/>
         </visual>
         <!--
         <collision>
@@ -250,9 +250,9 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_abad.obj"/>
+                <mesh filename="meshes/solo12_hip_fe_hl.obj"/>
             </geometry>
-            <origin rpy="3.141592 0.0 -1.5708" xyz="0.055 0.0 0.0"/>
+            <origin rpy="1.5707963267948966 0.0 0" xyz="0 0.0 0.0"/>
         </visual>
         <!--
         <collision>
@@ -353,9 +353,9 @@
         </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/mini_abad.obj"/>
+                <mesh filename="meshes/solo12_hip_fe_hr.obj"/>
             </geometry>
-            <origin rpy="0.0 0.0 1.5708" xyz="0.055 0.0 0.0"/>
+            <origin rpy="1.5707963267948966 0.0 0" xyz="0 0.0 0.0"/>
         </visual>
         <!--
         <collision>
