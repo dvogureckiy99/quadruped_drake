@@ -112,7 +112,7 @@
             <geometry>
                 <mesh filename="meshes/solo12_lower_leg_v2_left_side.obj"/>
             </geometry>
-            <origin rpy="1.5707963267948966 0 0.0" xyz="0.0 37e-3 0.049"/>
+            <origin rpy="1.5707963267948966 0 0.0" xyz="0.0 0 0 "/>
         </visual>
         <!--
         <collision>
