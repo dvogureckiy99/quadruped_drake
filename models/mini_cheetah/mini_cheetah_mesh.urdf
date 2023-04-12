@@ -439,7 +439,7 @@
 <!-- 0.0 -0.062 0.00    19.65e-3 -14e-3 0 -->
     <joint name="abduct_hr_to_thigh_hr_j" type="continuous">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0.0 0.0" xyz="19.65e-3 -14e-3 0"/>
+        <origin rpy="0.0 0 0" xyz="19.65e-3 -14e-3 0"/>
         <parent link="abduct_hr"/>
         <child link="thigh_hr"/>
         <limit effort="18" lower="-2.6" upper="2.6" velocity="40"/>
@@ -474,7 +474,7 @@
 
     <joint name="thigh_hr_to_knee_hr_j" type="continuous">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 -37e-3 -0.209"/>
+        <origin rpy="0.0 0 0" xyz="0.0 -37e-3 -0.209"/>
         <parent link="thigh_hr"/>
         <child link="shank_hr"/>
         <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
@@ -513,12 +513,11 @@
         -->
     </link>
 
-<!-- distance 0.0175  0.0159  r=  0.190 0.0159 -->
     <!-- Add foot links to enable relevent computations, including better collision detection -->
     <joint name="shank_fl_to_foot_fl" type="fixed">
         <parent link="shank_fl"/>
         <child link="LF_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.190"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 15.5e-3 -0.190"/>
     </joint>
     <link name="LF_FOOT">
         <inertial>
@@ -526,13 +525,13 @@
         </inertial>
         <collision>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
         <visual>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </visual>
@@ -541,7 +540,7 @@
     <joint name="shank_fr_to_foot_fr" type="fixed">
         <parent link="shank_fr"/>
         <child link="RF_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.190"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -15.5e-3 -0.190"/>
     </joint>
     <link name="RF_FOOT">
         <inertial>
@@ -549,13 +548,13 @@
         </inertial>
         <collision>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
         <visual>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </visual>
@@ -564,7 +563,7 @@
     <joint name="shank_hl_to_foot_hl" type="fixed">
         <parent link="shank_hl"/>
         <child link="LH_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.190"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 15.5e-3 -0.190"/>
     </joint>
     <link name="LH_FOOT">
         <inertial>
@@ -572,13 +571,13 @@
         </inertial>
         <collision>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
         <visual>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </visual>
@@ -587,7 +586,7 @@
     <joint name="shank_hr_to_foot_hr" type="fixed">
         <parent link="shank_hr"/>
         <child link="RH_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -0.190"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -15.5e-3 -0.190"/>
     </joint>
     <link name="RH_FOOT">
         <inertial>
@@ -595,13 +594,13 @@
         </inertial>
         <collision>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
         <visual>
             <geometry>
-                <sphere radius = "0.0159"/>
+                <sphere radius = "0.0162"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </visual>

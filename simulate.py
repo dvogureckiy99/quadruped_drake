@@ -19,7 +19,7 @@ control_method = "ID"      # ID = Inverse Dynamics (standard QP),
                            # CLF = control-lyapunov-function based
 
 sim_time = 6
-dt = 1e-3 # 5e-3
+dt = 5e-4 # 5e-3
 target_realtime_rate = 1.0
 
 show_diagram = True
@@ -57,7 +57,7 @@ plant.RegisterVisualGeometry(
         X_BG,
         HalfSpace(),
         "ground_visual",
-        np.array([0.5,0.5,0.5,0.8]))  
+        np.array([1,1,1,1]))  
 
 # Turn off gravity
 #g = plant.mutable_gravity_field()
@@ -72,7 +72,7 @@ trunk_frame = GeometryFrame("trunk")
 scene_graph.RegisterFrame(trunk_source, trunk_frame)
 
 trunk_shape = Box(0.4,0.2,0.1)
-trunk_color = np.array([0.1,0.1,0.1,0.4])
+trunk_color = np.array([0.1,0.1,0.1,0.0])  # color of trunk transparent
 X_trunk = RigidTransform()
 X_trunk.set_translation(np.array([0.0,0.0,0.0]))
 
@@ -174,7 +174,11 @@ else:
 # Set initial states
 plant_context = diagram.GetMutableSubsystemContext(plant, diagram_context)
 q0 = np.asarray([ 1.0, 0.0, 0.0, 0.0,     # base orientation
-                  0.0, 0.0, 0.3,          # base position
+                  0.0, 0.0, 0.32,          # base position
+                #   0.0,0, 0, 
+                #   0.0,0, 0, 
+                #   0.0,0, 0, 
+                #   0.0,0, 0])
                   0.0,-0.8, 1.6, 
                   0.0,-0.8, 1.6, 
                   0.0,-0.8, 1.6, 
