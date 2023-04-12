@@ -6,8 +6,14 @@
         <inertial>
             <mass value="1258.31807296e-3"/>
             <origin xyz="-0.43736695e-2 -0.07737584e-2 0.08102850e-2"/>
-            <inertia ixx="0.011253" ixy="0" ixz="0" iyy="0.036203" iyz="0" izz="0.042673"/>
-        </inertial>
+      <inertia
+        ixx="24223.93682550e-7"
+        ixy="-907.91818721e-7"
+        ixz="43.46649371e-7"
+        iyy="186672.18928423e-7"
+        iyz="-2.54822989e-7"
+        izz="206033.06774587e-7" />
+                </inertial>
         <visual>
             <geometry>
                 <mesh filename="meshes/solo_12_base.obj"/>
