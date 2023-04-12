@@ -18,8 +18,8 @@ control_method = "ID"      # ID = Inverse Dynamics (standard QP),
                            # PC = passivity-constrained
                            # CLF = control-lyapunov-function based
 
-sim_time = 10.0
-dt = 5e-3
+sim_time = 6
+dt = 1e-3 # 5e-3
 target_realtime_rate = 1.0
 
 show_diagram = True
