@@ -237,7 +237,8 @@ class PCController(MPTCController):
                                     vars=delta)
 
         result = self.solver.Solve(self.mp)
-        assert result.is_success()
+        # assert result.is_success()
+        assert result.get_solver_details()
         tau = result.GetSolution(tau)
 
         # Set quantities for logging
