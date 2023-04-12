@@ -87,7 +87,7 @@
     <link name="thigh_fl">
         <inertial>
             <mass value="144.14222037e-3"/>
-            <origin xyz="0.0 0.016 -0.02"/>
+            <origin xyz="0.00174095e-2 1.57310796e-2 -6.91454765e-2"/>
             <inertia ixx="0.001983" ixy="0.000245" ixz="0.000013" 
                 iyy="0.002103" iyz="0.0000015" izz="0.000508"/>
         </inertial>
@@ -196,7 +196,7 @@
     <link name="thigh_fr">
         <inertial>
             <mass value="144.14222037e-3"/>
-            <origin xyz="0.0 0.016 -0.02"/>
+            <origin xyz="-0.00174095e-2 -1.57310796e-2 -6.91454765e-2"/>
             <inertia ixx="0.001983" ixy="0.000245" ixz="0.000013" 
                 iyy="0.002103" iyz="0.0000015" izz="0.000508"/>
         </inertial>
@@ -305,7 +305,7 @@
     <link name="thigh_hl">
         <inertial>
             <mass value="144.14222037e-3"/>
-            <origin xyz="0.0 0.016 -0.02"/>
+            <origin xyz="0.00174095e-2 1.57310796e-2 -6.91454765e-2"/>
             <inertia ixx="0.001983" ixy="0.000245" ixz="0.000013" 
                 iyy="0.002103" iyz="0.0000015" izz="0.000508"/>
         </inertial>
@@ -414,7 +414,7 @@
     <link name="thigh_hr">
         <inertial>
             <mass value="144.14222037e-3"/>
-            <origin xyz="0.0 0.016 -0.02"/>
+            <origin xyz="-0.00174095e-2 -1.57310796e-2 -6.91454765e-2"/>
             <inertia ixx="0.001983" ixy="0.000245" ixz="0.000013" 
                 iyy="0.002103" iyz="0.0000015" izz="0.000508"/>
         </inertial>
