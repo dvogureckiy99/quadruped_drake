@@ -524,7 +524,7 @@
     name="LLM_fr">
     <inertial>
       <origin
-        xyz="-0 -0.44121055e-2 -5.66875318e-2"
+        xyz="0 -0.44121055e-2 -5.66875318e-2"
         rpy="0 0 0" />
       <mass
         value="44.08831168e-3" />
@@ -755,7 +755,7 @@
       effort="18"
       velocity="40" />
   </joint>
-  
+
 <!-- Add foot links to enable relevent computations, including better collision detection -->
 <!-- FR -->
   <joint name="foot_fr" type="fixed">
