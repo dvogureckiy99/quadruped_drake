@@ -114,8 +114,8 @@ class IDController(BasicController):
         """
 
         ######### Tuning Parameters #########
-        Kp_body_p = 500.0
-        Kd_body_p = 50.0
+        Kp_body_p = 200#500.0
+        Kd_body_p = 20#50.0
 
         Kp_body_rpy = Kp_body_p
         Kd_body_rpy = Kd_body_p

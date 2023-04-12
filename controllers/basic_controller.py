@@ -333,7 +333,7 @@ class BasicController(LeafSystem):
 
         # Nominal joint angles
         q_nom = np.asarray([ 1.0, 0.0, 0.0, 0.0,     # base orientation
-                             0.0, 0.0, 0.3,          # base position
+                             0.0, 0.0, 0.24094614699109293,,          # base position
                              0.0,-0.8, 1.6, 
                              0.0,-0.8, 1.6, 
                              0.0,-0.8, 1.6, 
