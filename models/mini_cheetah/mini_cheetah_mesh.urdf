@@ -33,6 +33,7 @@
         </collision> -->
     </link>
 <!-- 0.19 0.049    0.2141 0.0875 -->
+<!-- moment sof inertia 0.0 0.036 0.    -11.05511528e-2 0.46677473e-2 -0.00136777e-2 -->
     <!--!!!!!!!!!!!! Front Left Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <joint name="torso_to_abduct_fl_j" type="continuous">
         <axis xyz="1 0 0"/>
@@ -44,7 +45,7 @@
     <link name="abduct_fl">
         <inertial>
             <mass value="143.68024490e-3"/>
-            <origin xyz="0.0 0.036 0."/>
+            <origin xyz="-11.05511528e-2 0.46677473e-2 -0.00136777e-2"/>
             <inertia ixx="0.000381" ixy="0.000058" ixz="0.00000045" 
                 iyy="0.000560" iyz="0.00000095" izz="0.000444"/>
         </inertial>
@@ -148,7 +149,7 @@
     <link name="abduct_fr">
         <inertial>
             <mass value="143.68024490e-3"/>
-            <origin xyz="0.0 0.036 0."/>
+            <origin xyz="-11.05511528e-2 0.46677473e-2 -0.00136777e-2"/>
             <inertia ixx="0.000381" ixy="0.000058" ixz="0.00000045" 
                 iyy="0.000560" iyz="0.00000095" izz="0.000444"/>
         </inertial>
@@ -252,7 +253,7 @@
     <link name="abduct_hl">
         <inertial>
             <mass value="143.68024490e-3"/>
-            <origin xyz="0.0 0.036 0."/>
+            <origin xyz="-11.05511528e-2 0.46677473e-2 -0.00136777e-2"/>
             <inertia ixx="0.000381" ixy="0.000058" ixz="0.00000045" 
                 iyy="0.000560" iyz="0.00000095" izz="0.000444"/>
         </inertial>
@@ -356,7 +357,7 @@
     <link name="abduct_hr">
         <inertial>
             <mass value="143.68024490e-3"/>
-            <origin xyz="0.0 0.036 0."/>
+            <origin xyz="-11.05511528e-2 0.46677473e-2 -0.00136777e-2"/>
             <inertia ixx="0.000381" ixy="0.000058" ixz="0.00000045" 
                 iyy="0.000560" iyz="0.00000095" izz="0.000444"/>
         </inertial>
