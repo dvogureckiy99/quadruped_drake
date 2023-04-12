@@ -529,12 +529,12 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <visual>
+        <!-- <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual>
+        </visual> -->
     </link>
     
     <joint name="shank_fr_to_foot_fr" type="fixed">
@@ -552,12 +552,12 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <visual>
+        <!-- <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual>
+        </visual> -->
     </link>
     
     <joint name="shank_hl_to_foot_hl" type="fixed">
@@ -575,12 +575,12 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <visual>
+        <!-- <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual>
+        </visual> -->
     </link>
     
     <joint name="shank_hr_to_foot_hr" type="fixed">
@@ -598,12 +598,12 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <visual>
+        <!-- <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual>
+        </visual> -->
     </link>
 
     <!-- Joint Transmissions: Tells Drake that these are actuated -->

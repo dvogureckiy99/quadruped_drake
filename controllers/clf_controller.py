@@ -89,6 +89,7 @@ class CLFController(IDController):
         num_swing = sum(swing_feet)
 
         p_body_nom = trunk_data["p_body"]
+        p_body_nom[2] = 0.24094614699109293
         pd_body_nom = trunk_data["pd_body"]
         pdd_body_nom = trunk_data["pdd_body"]
 
