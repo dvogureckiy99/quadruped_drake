@@ -755,6 +755,7 @@
       effort="18"
       velocity="40" />
   </joint>
+  
 <!-- Add foot links to enable relevent computations, including better collision detection -->
 <!-- FR -->
   <joint name="foot_fr" type="fixed">
