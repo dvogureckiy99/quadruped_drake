@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 show_trunk_model = True
 use_lcm = False
 
-planning_method = "towr"   # "towr" or "basic"
+planning_method = "basic"   # "towr" or "basic"
 control_method = "ID"      # ID = Inverse Dynamics (standard QP), 
                            # B = Basic (simple joint-space PD), 
                            # MPTC = task-space passivity
@@ -174,7 +174,7 @@ else:
 # Set initial states
 plant_context = diagram.GetMutableSubsystemContext(plant, diagram_context)
 q0 = np.asarray([ 1.0, 0.0, 0.0, 0.0,     # base orientation
-                  0.0, 0.0, 0.32,          # base position
+                  0.0, 0.0, 0.24094614699109293,          # base position
                 #   0.0,0, 0, 
                 #   0.0,0, 0, 
                 #   0.0,0, 0, 
