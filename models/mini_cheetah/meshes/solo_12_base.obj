@@ -1,6 +1,7 @@
 # Blender 3.5.0 OBJ File: 'solo12.blend'
 # www.blender.org
-mtllib solo_12_base.mtl
+mtllib ./solo_12_base.mtl
+usemtl Material_4
 o solo_12_base
 v 0.155850 0.025000 0.048000
 v 0.155850 0.025000 -0.048000

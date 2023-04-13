@@ -1,6 +1,7 @@
 # Blender 3.5.0
 # www.blender.org
-mtllib solo12_lower_leg_v2_right_side.mtl
+mtllib ./solo12_lower_leg_v2.mtl
+usemtl Material_3
 o solo12_lower_leg_v2_right_side
 v -0.006000 -0.142788 0.005000
 v -0.006185 -0.144703 0.005000

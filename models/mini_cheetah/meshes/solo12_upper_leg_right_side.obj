@@ -1,6 +1,7 @@
 # Blender 3.5.0
 # www.blender.org
-mtllib solo12_upper_leg_right_side.mtl
+mtllib ./solo12_upper_leg.mtl
+usemtl Material_2
 o solo12_upper_leg_right_side
 v -0.010621 -0.053697 0.013450
 v -0.008204 -0.056284 0.013450

@@ -1,6 +1,7 @@
 # Blender 3.5.0
 # www.blender.org
-mtllib solo12_hip_fe_hl.mtl
+mtllib ./solo12_hip_fe_hl.mtl
+usemtl Material_7
 o solo12_hip_fe_hl
 v 0.001000 0.005765 -0.009200
 v 0.001000 0.004660 -0.009409
