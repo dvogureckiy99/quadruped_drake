@@ -33,7 +33,8 @@
         </collision> -->
     </link>
 
-    <!--!!!!!!!!!!!! Front Left Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<!-- <joint_properties damping="1000.0" friction="1000.0"/> -->
+<!--!!!!!!!!!!!! Front Left Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <joint name="torso_to_abduct_fl_j" type="continuous">
         <axis xyz="1 0 0"/>
         <origin rpy="0 0 0" xyz="0.2141 0.0875 0.0 "/> 
