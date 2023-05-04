@@ -33,7 +33,6 @@
         </collision> -->
     </link>
 
-<!-- moment sof inertia 0.0 0.036 0.    -11.05511528e-2 0.46677473e-2 -0.00136777e-2 -->
     <!--!!!!!!!!!!!! Front Left Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <joint name="torso_to_abduct_fl_j" type="continuous">
         <axis xyz="1 0 0"/>
