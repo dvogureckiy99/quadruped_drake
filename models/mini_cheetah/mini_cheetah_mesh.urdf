@@ -131,12 +131,14 @@
         </visual>
     </link>
 
+<!-- <torsional_spring stiffness = "100000000" rest_angle = ".75">
+   <joint name = "shoulder"/>
+ </torsional_spring> -->
     <joint name="lower_leg_joint_fl" type="continuous">
         <axis xyz="0 -1 0"/>
         <origin rpy="0.0 0 0.0" xyz="0.0 7.5e-3 -0.08"/>
         <parent link="shank_fl"/>
         <child link="lower_leg_L_fl"/>
-        <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
         <joint_properties damping="1000.0" friction="1000.0"/>
     </joint>
     <link name="lower_leg_L_fl">
