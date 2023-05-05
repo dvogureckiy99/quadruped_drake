@@ -120,6 +120,33 @@
     </joint>
     <link name="shank_fl">
         <inertial>
+            <mass value="23.48772094e-3"/>
+            <origin xyz="0 0.75190156 -2.69034785e-2"/>
+      <inertia
+        ixx="128.39137653e-7"
+        ixy="0.00000524e-7"
+        ixz="-0.00014698e-7"
+        iyy="134.04180965e-7"
+        iyz="-9.36618856e-7"
+        izz="12.83208435e-7" />
+               </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="meshes/solo12_lower_leg_H.obj"/>
+            </geometry>
+            <origin rpy="1.5707963267948966 0 0.0" xyz="0.0 0 0 "/>
+        </visual>
+    </link>
+
+    <joint name="lower_leg_joint_fl" type="continuous">
+        <axis xyz="0 -1 0"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 37e-3 -0.16"/>
+        <parent link="thigh_fl"/>
+        <child link="shank_fl"/>
+        <limit effort="26" lower="-2.6" upper="2.6" velocity="26"/>
+    </joint>
+    <link name="lower_leg_L_fl">
+        <inertial>
             <mass value="44.08831168e-3"/>
             <origin xyz="0 0.44121055e-2 -5.66875318e-2"/>
       <inertia
@@ -136,22 +163,8 @@
             </geometry>
             <origin rpy="1.5707963267948966 0 0.0" xyz="0.0 0 0 "/>
         </visual>
-        <!--
-        <collision>
-            <geometry>
-                <cylinder length ="0.19" radius = "0.015"/>
-            </geometry>
-            <origin rpy="0.0 3.141592 0.0" xyz="0 0 -0.095"/>
-        </collision>
-        <collision>
-            <geometry>
-                <sphere radius = "0.0175"/>
-            </geometry>
-            <origin rpy="0.0 3.141592 0.0" xyz="0 0 -0.195"/>
-        </collision>
-        -->
     </link>
-
+    
     <!--!!!!!!!!!!!! Front Right Leg !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <joint name="torso_to_abduct_fr_j" type="continuous">
         <axis xyz="1 0 0"/>
