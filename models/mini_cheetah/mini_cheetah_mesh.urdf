@@ -503,7 +503,7 @@
 
     <!-- Add foot links to enable relevent computations, including better collision detection -->
     <joint name="shank_fl_to_foot_fl" type="fixed">
-        <parent link="shank_fl"/>
+        <parent link="lower_leg_L_fl"/>
         <child link="LF_FOOT"/>
         <origin rpy="0.0 0.0 0.0" xyz="0.0 0 -0.08"/>
     </joint>
@@ -517,12 +517,6 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <!-- <visual>
-            <geometry>
-                <sphere radius = "0.018"/>
-            </geometry>
-            <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual> -->
     </link>
     
     <joint name="shank_fr_to_foot_fr" type="fixed">
