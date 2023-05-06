@@ -184,6 +184,7 @@ q0 = np.asarray([ 1.0, 0.0, 0.0, 0.0,     # base orientation
                   0.0,-0.8, 1.6, 
                   0.0,-0.8, 1.6])
 qd0 = np.zeros(plant.num_velocities())
+print("q={0}, self.plant.num_positions()={1}.".format(len(q0),plant.num_positions()))
 plant.SetPositions(plant_context,q0)
 plant.SetVelocities(plant_context,qd0)
 

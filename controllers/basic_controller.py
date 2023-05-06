@@ -94,7 +94,7 @@ class BasicController(LeafSystem):
         state = self.EvalVectorInput(context, 0).get_value()
         q = state[:self.plant.num_positions()]
         v = state[-self.plant.num_velocities():]
-
+        # print("q={0}, self.plant.num_positions()={1}.".format(q,self.plant.num_positions()))
         self.plant.SetPositions(self.context, q)
         self.plant.SetVelocities(self.context, v)
 
