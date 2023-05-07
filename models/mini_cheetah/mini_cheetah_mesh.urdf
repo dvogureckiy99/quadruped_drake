@@ -131,30 +131,54 @@
         </visual>
     </link>
 
-    <joint name="lower_leg_joint_fl" type="fixed">
+    <joint name="lower_leg_joint1_fl" type="fixed">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 7.5e-3 -0.08"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 7.95e-3 -0.0725"/>
         <parent link="shank_fl"/>
+        <child link="lower_leg_center_fl"/>
+    </joint>
+    <link name="lower_leg_center_fl">
+        <inertial>
+            <mass value="1e-3"/>
+            <origin xyz="0 0 -7.5e-3"/>
+        <inertia
+            ixx="0"
+            ixy="0"
+            ixz="0"
+            iyy="0"
+            iyz="0"
+            izz="0" />
+        </inertial>
+        <visual>
+            <geometry>
+                <box size="10e-3 10e-3 14e-3" />
+            </geometry>
+            <origin rpy="0 0 0.0" xyz="0.0 0 -7.5e-3"/>
+        </visual>
+    </link>
+    <joint name="lower_leg_joint2_fl" type="fixed">
+        <axis xyz="0 -1 0"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 0 -0.014"/>
+        <parent link="lower_leg_center_fl"/>
         <child link="lower_leg_L_fl"/>
-        <limit effort="18" lower="-2.6" upper="2.6" velocity="40"/>
     </joint>
     <link name="lower_leg_L_fl">
         <inertial>
             <mass value="14.20602001e-3"/>
             <origin xyz="0 0 -5.34282905e-2"/>
-      <inertia
-        ixx="91.73083151e-7"
-        ixy="0"
-        ixz="0"
-        iyy="94.50145857e-7"
-        iyz="0"
-        izz="4.91707136e-7" />
-               </inertial>
+        <inertia
+            ixx="91.73083151e-7"
+            ixy="0"
+            ixz="0"
+            iyy="94.50145857e-7"
+            iyz="0"
+            izz="4.91707136e-7" />
+        </inertial>
         <visual>
             <geometry>
                 <mesh filename="meshes/solo12_lower_leg_L.obj" scale="1 1 1"/>
             </geometry>
-            <origin rpy="0 0 0.0" xyz="0.0 0 0 "/>
+            <origin rpy="0 0 0.0" xyz="0.0 0 7.5e-3"/>
         </visual>
     </link>
     
@@ -521,13 +545,16 @@
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+            <material>
+                <color rgba="1 1 1 0.6"/>
+            </material>    
         </visual>
     </link>
     
     <joint name="shank_fr_to_foot_fr" type="fixed">
         <parent link="shank_fr"/>
         <child link="RF_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 -7.5e-3 -0.16"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -7.95e-3 -0.16"/>
     </joint>
     <link name="RF_FOOT">
         <inertial>
@@ -539,18 +566,21 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <!-- <visual>
+        <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual> -->
+            <material>
+                <color rgba="1 1 1 0.6"/>
+            </material>    
+        </visual>
     </link>
     
     <joint name="shank_hl_to_foot_hl" type="fixed">
         <parent link="shank_hl"/>
         <child link="LH_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 7.5e-3 -0.16"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 7.95e-3 -0.16"/>
     </joint>
     <link name="LH_FOOT">
         <inertial>
@@ -562,18 +592,21 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <!-- <visual>
+        <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual> -->
+            <material>
+                <color rgba="1 1 1 0.6"/>
+            </material>    
+        </visual>
     </link>
     
     <joint name="shank_hr_to_foot_hr" type="fixed">
         <parent link="shank_hr"/>
         <child link="RH_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 -7.5e-3 -0.16"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 -7.95e-3 -0.16"/>
     </joint>
     <link name="RH_FOOT">
         <inertial>
@@ -585,12 +618,15 @@
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
         </collision>
-        <!-- <visual>
+        <visual>
             <geometry>
                 <sphere radius = "0.018"/>
             </geometry>
             <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-        </visual> -->
+            <material>
+                <color rgba="1 1 1 0.6"/>
+            </material>    
+        </visual>
     </link>
 
     <!-- Joint Transmissions: Tells Drake that these are actuated -->
