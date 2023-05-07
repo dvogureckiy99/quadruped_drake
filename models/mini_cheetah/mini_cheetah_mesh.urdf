@@ -125,21 +125,17 @@
                </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/solo12_lower_leg_H.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="meshes/solo12_lower_leg_H.obj" scale="1 1 1"/>
             </geometry>
-            <origin rpy="0 0 0.0" xyz="0.0 0 0 "/>
+            <origin rpy="0 0 3.141592653589793" xyz="0.0 0 0 "/>
         </visual>
     </link>
 
-<!-- <torsional_spring stiffness = "100000000" rest_angle = ".75">
-   <joint name = "shoulder"/>
- </torsional_spring> -->
     <joint name="lower_leg_joint_fl" type="fixed">
         <axis xyz="0 -1 0"/>
         <origin rpy="0.0 0 0.0" xyz="0.0 7.5e-3 -0.08"/>
         <parent link="shank_fl"/>
         <child link="lower_leg_L_fl"/>
-        <joint_properties damping="1e12" friction="1e12"/>
         <limit effort="18" lower="-2.6" upper="2.6" velocity="40"/>
     </joint>
     <link name="lower_leg_L_fl">
@@ -156,7 +152,7 @@
                </inertial>
         <visual>
             <geometry>
-                <mesh filename="meshes/solo12_lower_leg_L.obj" scale="0.001 0.001 0.001"/>
+                <mesh filename="meshes/solo12_lower_leg_L.obj" scale="1 1 1"/>
             </geometry>
             <origin rpy="0 0 0.0" xyz="0.0 0 0 "/>
         </visual>
