@@ -127,20 +127,20 @@
             <geometry>
                 <mesh filename="meshes/solo12_lower_leg_H.obj" scale="1 1 1"/>
             </geometry>
-            <origin rpy="0 0 3.141592653589793" xyz="0.0 0 0 "/>
+            <origin rpy="0 0 3.141592653589793" xyz="0.0 -1.3e-3 0 "/>
         </visual>
     </link>
 
     <joint name="lower_leg_joint1_fl" type="fixed">
         <axis xyz="0 -1 0"/>
-        <origin rpy="0.0 0 0.0" xyz="0.0 7.95e-3 -0.0725"/>
+        <origin rpy="0.0 0 0.0" xyz="0.0 7.95e-3 -0.073"/>
         <parent link="shank_fl"/>
         <child link="lower_leg_center_fl"/>
     </joint>
     <link name="lower_leg_center_fl">
         <inertial>
             <mass value="1e-3"/>
-            <origin xyz="0 0 -7.5e-3"/>
+            <origin xyz="0 0 -7e-3"/>
         <inertia
             ixx="0"
             ixy="0"
@@ -153,7 +153,7 @@
             <geometry>
                 <box size="10e-3 10e-3 14e-3" />
             </geometry>
-            <origin rpy="0 0 0.0" xyz="0.0 0 -7.5e-3"/>
+            <origin rpy="0 0 0.0" xyz="0.0 0 -7e-3"/>
         </visual>
     </link>
     <joint name="lower_leg_joint2_fl" type="fixed">
@@ -528,7 +528,7 @@
     <joint name="shank_fl_to_foot_fl" type="fixed">
         <parent link="lower_leg_L_fl"/>
         <child link="LF_FOOT"/>
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0 -0.08"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0 -0.073"/>
     </joint>
     <link name="LF_FOOT">
         <inertial>

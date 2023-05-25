@@ -1,0 +1,17 @@
+<robot name="torus" xmlns:xacro="http://ros.org/wiki/xacro">
+    <link name="deformable_link">
+    <visual>
+        <geometry>
+            <box size="10e-3 10e-3 14e-3" />
+        </geometry>
+        <material name="blue">
+            <color rgba="0 0 .8 .9"/>
+        </material>
+    </visual>
+    <collision>
+        <geometry>
+            <box size="10e-3 10e-3 14e-3" />
+        </geometry>
+    </collision>
+    </link>
+</robot>
