@@ -48,7 +48,14 @@ class BasicController(LeafSystem):
                 "output_metrics",
                 BasicVector(4),
                 self.SetLoggingOutputs)
-
+        
+        # Declare output ports for logging
+        self.q = np.zeros(self.plant.num_positions())
+        self.DeclareVectorOutputPort(
+                "quad_state",
+                BasicVector(self.plant.num_positions()),
+                self.SetLoggingState)
+        
         # Handle whether or not we're communicating with a real robot and/or simulator
         # over LCM. 
         self.use_lcm = use_lcm
@@ -75,6 +82,9 @@ class BasicController(LeafSystem):
         self.rf_foot_frame_autodiff = self.plant_autodiff.GetFrameByName("RF_FOOT")
         self.lh_foot_frame_autodiff = self.plant_autodiff.GetFrameByName("LH_FOOT")
         self.rh_foot_frame_autodiff = self.plant_autodiff.GetFrameByName("RH_FOOT")
+
+    def SetLoggingState(self, context, output):
+        output.SetFromVector(self.q)
 
     def lcm_callback(self, channel, data):
         """
@@ -267,7 +277,7 @@ class BasicController(LeafSystem):
                                                      self.world_frame)
 
         return pose, J, Jdv.get_coeffs()
-    
+
     def SetLoggingOutputs(self, context, output):
         """
         Set outputs for logging, namely a vector consisting of
@@ -299,6 +309,7 @@ class BasicController(LeafSystem):
             # Get robot's current state (q,v) from Drake
             self.UpdateStoredContext(context)
             q = self.plant.GetPositions(self.context)
+            self.q = q
             v = self.plant.GetVelocities(self.context)
 
         # Compute controls to apply

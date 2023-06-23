@@ -11,7 +11,6 @@ class CLFController(IDController):
     def __init__(self, plant, dt, use_lcm=False):
         IDController.__init__(self, plant, dt, use_lcm=use_lcm)
 
-
     def AddVdotCost(self, x_tilde, xd_tilde, P, G, J, vd, weight=1):
         """
         Add a cost penalizing the time derivative of the Lyapunov function
@@ -227,6 +226,7 @@ class CLFController(IDController):
         assert result.get_solver_details()
 
         tau = result.GetSolution(tau)
+        self.tau = tau
         vd = result.GetSolution(vd)
 
         # Logging

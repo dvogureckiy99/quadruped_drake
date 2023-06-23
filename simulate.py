@@ -142,6 +142,8 @@ builder.Connect(plant.get_state_output_port(),
 
 # Add loggers
 logger = LogVectorOutput(controller.GetOutputPort("output_metrics"),builder)
+logger2 = LogVectorOutput(controller.GetOutputPort("quad_state"),builder)
+logger3 = LogVectorOutput(controller.GetOutputPort("quad_torques"),builder)
 
 # Set up the Visualizer
 meshcat = Meshcat()
@@ -184,7 +186,7 @@ q0 = np.asarray([ 1.0, 0.0, 0.0, 0.0,     # base orientation
                   0.0,-0.8, 1.6, 
                   0.0,-0.8, 1.6])
 qd0 = np.zeros(plant.num_velocities())
-print("q={0}, self.plant.num_positions()={1}.".format(len(q0),plant.num_positions()))
+print("len(q0)={0}, self.plant.num_positions()={1}.".format(len(q0),plant.num_positions()))
 plant.SetPositions(plant_context,q0)
 plant.SetVelocities(plant_context,qd0)
 
@@ -197,35 +199,23 @@ vis.StopRecording()
 
 if make_plots:
     log = logger.FindLog(diagram_context)
+    log2 = logger2.FindLog(diagram_context)
 
+    state = log2.data()
+
+    f = open('states.npy', 'wb')
+    np.save(f, state)
+
+    # print(log.data())
     # Plot stuff
-    t = log.sample_times()[10:]
-    V = log.data()[0,10:]   
-    err = log.data()[1,10:]
-    res = log.data()[2,10:]
-    Vdot = log.data()[3,10:]
+    t = log.sample_times()
+    # V = log.data()[0,10:]   
+    # err = log.data()[1,10:]
+    # res = log.data()[2,10:]
+    # Vdot = log.data()[3,10:]
 
-    plt.figure()
-    #plt.subplot(4,1,1)
-    #plt.plot(t, res, linewidth='2')
-    #plt.ylabel("Residual")
-
-    plt.subplot(3,1,1)
-    plt.plot(t, Vdot, linewidth='2')
-    plt.axhline(0,linestyle='dashed', color='grey')
-    plt.ylabel("$\dot{V}$")
-
-    plt.subplot(3,1,2)
-    plt.plot(t, V, linewidth='2')
-    plt.ylabel("$V$")
-
-    plt.subplot(3,1,3)
-    plt.plot(t, err, linewidth='2')
-    plt.ylabel("$\|y_1-y_2\|^2$")
-    plt.xlabel("time (s)")
-
-    plt.savefig('dV_V_error.pdf')
-    # plt.show()
+    f = open('t.npy', 'wb')
+    np.save(f, t)
 
 # vis.PublishRecording()
 import time
