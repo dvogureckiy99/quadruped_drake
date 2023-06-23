@@ -200,11 +200,15 @@ vis.StopRecording()
 if make_plots:
     log = logger.FindLog(diagram_context)
     log2 = logger2.FindLog(diagram_context)
+    log3 = logger3.FindLog(diagram_context)
 
     state = log2.data()
-
     f = open('states.npy', 'wb')
     np.save(f, state)
+
+    tau = log3.data()
+    f = open('tau.npy', 'wb')
+    np.save(f, tau)
 
     # print(log.data())
     # Plot stuff

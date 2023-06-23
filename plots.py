@@ -15,10 +15,13 @@ state = np.load(f)
 
 f = open('t.npy', 'rb')
 t = np.load(f)
+f = open('tau.npy', 'rb')
+tau = np.load(f)
 # data resize
 FIRST_IND = 10
 t = t[FIRST_IND:]
 state = state[:,FIRST_IND:]
+tau = tau[:,FIRST_IND:]
 
 # # Euler angles
 # q = np.zeros((np.shape(state[0])[0],4))
@@ -159,3 +162,83 @@ state = state[:,FIRST_IND:]
 # plt.xlabel("время [сек]")   
 # plt.savefig("q_leg_hr.pdf",bbox_inches='tight', pad_inches=0)
 
+
+plt.figure(figsize=(10,5))
+plt.subplot(3,1,1)
+plt.title("Передняя левая нога, моменты.")
+plt.grid(1)
+plt.plot(t, tau[0], linewidth='1')
+plt.ylabel(r'$\tau_1$, [Н*м]')
+
+plt.subplot(3,1,2)
+plt.grid(1)
+plt.plot(t, tau[1], linewidth='1')
+plt.ylabel(r'$\tau_2$, [Н*м]')
+
+plt.subplot(3,1,3)
+plt.grid(1)
+plt.plot(t, tau[2], linewidth='1')
+plt.ylabel(r'$\tau_3$, [Н*м]')
+
+plt.xlabel("время [сек]")   
+plt.savefig("tau_leg_fl.pdf",bbox_inches='tight', pad_inches=0)
+
+plt.figure(figsize=(10,5))
+plt.subplot(3,1,1)
+plt.title("Передняя правая нога, моменты.")
+plt.grid(1)
+plt.plot(t, tau[3], linewidth='1')
+plt.ylabel(r'$\tau_1$, [Н*м]')
+
+plt.subplot(3,1,2)
+plt.grid(1)
+plt.plot(t, tau[4], linewidth='1')
+plt.ylabel(r'$\tau_2$, [Н*м]')
+
+plt.subplot(3,1,3)
+plt.grid(1)
+plt.plot(t, tau[5], linewidth='1')
+plt.ylabel(r'$\tau_3$, [Н*м]')
+
+plt.xlabel("время [сек]")   
+plt.savefig("tau_leg_fr.pdf",bbox_inches='tight', pad_inches=0)
+
+plt.figure(figsize=(10,5))
+plt.subplot(3,1,1)
+plt.title("Задняя левая нога, моменты.")
+plt.grid(1)
+plt.plot(t, tau[6], linewidth='1')
+plt.ylabel(r'$\tau_1$, [Н*м]')
+
+plt.subplot(3,1,2)
+plt.grid(1)
+plt.plot(t, tau[7], linewidth='1')
+plt.ylabel(r'$\tau_2$, [Н*м]')
+
+plt.subplot(3,1,3)
+plt.grid(1)
+plt.plot(t, tau[8], linewidth='1')
+plt.ylabel(r'$\tau_3$, [Н*м]')
+
+plt.xlabel("время [сек]")   
+plt.savefig("tau_leg_hl.pdf",bbox_inches='tight', pad_inches=0)
+
+plt.figure(figsize=(10,5))
+plt.subplot(3,1,1)
+plt.title("Задняя правая нога, моменты.")
+plt.grid(1)
+plt.plot(t, tau[9], linewidth='1')
+plt.ylabel(r'$\tau _1$, [Н*м]')
+
+plt.subplot(3,1,2)
+plt.grid(1)
+plt.plot(t, tau[10], linewidth='1')
+plt.ylabel(r'$\tau _2$, [Н*м]')
+
+plt.subplot(3,1,3)
+plt.grid(1)
+plt.plot(t, tau[11], linewidth='1')
+plt.ylabel(r'$\tau _3$, [Н*м]')
+
+plt.xlabel("время [сек]")   
+plt.savefig("tau_leg_hr.pdf",bbox_inches='tight', pad_inches=0)
